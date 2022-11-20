@@ -1,0 +1,1169 @@
+/** ***************************************
+
+  TABLE OF CONTENTS
+  ---------------------------
+   1. Variables
+    - Font Size
+    - Colors
+   2. Typography
+    - font-family: ;
+    - font-size: ;
+    - font-weight: ;
+    - letter-spacing: ;
+    - line-height: ;
+    - text-align: ;
+    - text-transform: ;
+   3. Colors
+    - color: ;
+    - background-color: ;
+    - background: ;
+    - border: ;
+   4. Overlay & Background Layer
+   5. Box Layer
+   6. Text Animation
+   7. Content
+    - Vertical Align
+    - Divider
+    - Main Section
+      - Logo
+      - Main H2
+      - Paragraph
+      - Subscribe Form
+      - Switching Sections Buttons
+    - Counter Area Section
+      - Counter
+      - Social Icons
+    - Contact Section
+      - Contact Details
+   8. Media Queries
+    - Tablets
+    - Mobiles
+
+ **  ***************************************/
+/******************************************************************
+*******************************   1. VARIABLES
+******************************************************************/
+/**************************************
+  FONT SIZE
+*************************************/
+/**************************************
+  COLORS
+*************************************/
+/******************************************************************
+*******************************   2. TYPOGRAPHY
+******************************************************************/
+/**************************************
+  font-family: ;
+*************************************/
+
+@font-face {
+    font-family: 'BYekan';
+    src: url('../fonts/BYekan.woff') format('woff'),
+    url('../fonts/BYekan.ttf') format('ttf'),
+    url('../fonts/BYekan.eot') format('eot');
+    font-weight: normal;
+    font-style: normal;
+        
+}
+
+body,
+html {
+  font-family: 'BYekan', sans-serif; }
+
+/**************************************
+  font-size: ;
+*************************************/
+.font-size-14 {
+  font-size: 14px; }
+
+.font-size-18:after,
+.font-size-18:before,
+.font-size-18 {
+  font-size: 18px; }
+
+.font-size-28 {
+  font-size: 28px; }
+
+.font-size-35 {
+  font-size: 35px; }
+
+.text-animation-phrases h2 {
+  font-size: 50px; }
+
+.contact-details-icon {
+  font-size: 90px; }
+
+/**************************************
+  MOBILE
+*************************************/
+@media only screen and (max-width: 767px) {
+  .text-animation-phrases h2 {
+    font-size: 25px !important; } }
+/**************************************
+  font-weight: ;
+*************************************/
+.subscribe-email-field,
+.subscribe-email-label {
+  font-weight: 400; }
+
+.text-animation-phrases h2 {
+  font-weight: 200; }
+
+/**************************************
+  letter-spacing: ;
+*************************************/
+.subscribe-email-field,
+.contact-details-text,
+#counter-area p {
+  letter-spacing: 1.2px; }
+
+.main-paragraph {
+ }
+
+/**************************************
+  line-height: ;
+*************************************/
+body,
+html {
+  line-height: 20px; }
+
+.contact-details-text {
+  line-height: 22px; }
+
+/**************************************
+  text-align: ;
+*************************************/
+#main,
+.subscribe-email-label,
+.rest-button,
+.rest-button1,
+#counter-area,
+#counter,
+#contact,
+.contact-details-icon-container,
+.contact-details-text {
+  text-align: center; }
+
+.contact-paragraph {
+  text-align: right; }
+
+/**************************************
+  text-transform: ;
+*************************************/
+.text-effect,
+.main-paragraph {
+  text-transform: uppercase; }
+
+/******************************************************************
+*******************************   3. COLORS
+******************************************************************/
+/**************************************
+  color: ;
+*************************************/
+#main,
+#contact,
+.social,
+.cd-email a:hover,
+.contact-details-text,
+a.contact-details-text,
+.rest-button,
+.rest-button1,
+.rest-button:hover,
+.rest-button1:hover {
+  color: #FFF; }
+
+.divider:after,
+.divider:before {
+  color: #428bca; }
+
+/**************************************
+  background-color: ;
+*************************************/
+.subscribe-email-field {
+  background-color: transparent; }
+
+/*.box-object {
+  background-color: rgba(21, 21, 21, 0.65);
+}*/
+.switch-button-1,
+.switch-button-2,
+.switch-button-3 {
+  background-color: rgba(44, 44, 44, 0.52); }
+
+.soc-border1,
+.soc-border2,
+.soc-border3,
+.soc-border4 {
+  background-color: #FFF; }
+
+/**************************************
+  background: ;
+*************************************/
+.subscribe-email-label-animation-default::before,
+.subscribe-email-label-animation-default::after {
+  background: rgba(255, 255, 255, 0.3); }
+
+.subscribe-email-label-animation-error::before,
+.subscribe-email-label-animation-error::after {
+  background: red; }
+
+.layer1 {
+  background: linear-gradient(to right, transparent, cyan, transparent); }
+
+.layer2 {
+  background: linear-gradient(transparent, cyan, transparent); }
+
+.layer3 {
+  background: linear-gradient(transparent, cyan, transparent); }
+
+.layer4 {
+  background: linear-gradient(to right, transparent, cyan, transparent); }
+
+.divider {
+  background: #ddd; }
+
+.divider:after,
+.divider:before {
+  background: #FFF; }
+
+.contact-details {
+  background: rgba(66, 139, 202, 0.25); }
+
+/**************************************
+  border: ;
+*************************************/
+.inner-border-top {
+  border-top: 2px solid #FFF; }
+
+.inner-border-bottom {
+  border-bottom: 2px solid #FFF; }
+
+.inner-border-left {
+  border-left: 2px solid #FFF; }
+
+.inner-border-right {
+  border-right: 2px solid #FFF; }
+
+.divider:after {
+  border: 1px solid #f0f0f0; }
+
+.divider:before {
+  border: 1px solid #f0f0f0; }
+
+/******************************************************************
+*******************************   4. OVERLAY & BACKGROUND LAYER
+******************************************************************/
+/*  Lines container & background gradient class */
+#background-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.overlay {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: url(../img/pattern.png);
+  opacity: 0.3;
+  z-index: -1; }
+
+/******************************************************************
+*******************************   5. BOX LAYER
+******************************************************************/
+.box-object {
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  margin-left: 0px;
+  margin-top: 0px;
+  position: absolute;
+  background-color: #333333;
+  transition: 2s; }
+  .box-object .box-object-inner-border {
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: linear-gradient(#FFF, #FFF), linear-gradient(to right, #FFF, #FFF), linear-gradient(to bottom, #FFF, #FFF), linear-gradient(to left, #FFF, #FFF), linear-gradient(transparent, transparent);
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left top, left bottom, right bottom, right top, 1px 1px; }
+  .box-object .border-animation {
+    animation: border_animation 6s ease-out 0.5s forwards; }
+@keyframes border_animation {
+  0% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left top, left bottom, right bottom, right top, 1px 1px; }
+  50% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, right bottom, right top, left top, 1px 1px; }
+  100% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, left bottom, right top, right top, 1px 1px; } }
+  .box-object .border-animation-2 {
+    animation: border_animation_2 2s ease-out forwards; }
+@keyframes border_animation_2 {
+  0% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left top, left bottom, right bottom, right top, 1px 1px; }
+  100% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, right bottom, right top, left top, 1px 1px; } }
+  .box-object .border-animation-3 {
+    animation: border_animation_3 2s ease-out forwards; }
+@keyframes border_animation_3 {
+  0% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, right bottom, right top, left top, 1px 1px; }
+  100% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left top, left bottom, right bottom, right top, 1px 1px; } }
+  .box-object .border-animation-4 {
+    animation: border_animation_4 3s ease-out forwards; }
+@keyframes border_animation_4 {
+  0% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left top, left bottom, right bottom, right top, 1px 1px; }
+  50% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, right bottom, right top, left top, 1px 1px; }
+  100% {
+    background-size: 1px 50%, 50% 1px, 1px 50%, 50% 1px, calc(100% - 8px) calc(100% - 8px);
+    background-position: left bottom, left bottom, right top, right top, 1px 1px; } }
+  @media only screen and (max-width: 768px) {
+    .box-object .show-effect {
+      animation: show 2s linear;
+      display: block !important; }
+    .box-object .switch-button-1 .vcenter {
+      display: block; } }
+@keyframes show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.box-to-romb {
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform: rotateZ(135deg);
+  background-color: rgba(21, 21, 21, 0.65) !important; }
+
+.box-to-romb-2 {
+  width: 50%;
+  height: 100vh;
+  left: 25%;
+  transform: rotateZ(0deg);
+  background-color: rgba(21, 21, 21, 0.65) !important; }
+
+.box-to-romb-3 {
+  width: 120vw;
+  height: 100vh;
+  left: -10vw;
+  transform: rotateZ(135deg);
+  background-color: rgba(21, 21, 21, 0.65) !important; }
+
+.box-to-romb-4 {
+  width: 120vw;
+  height: 40vh;
+  top: 10vw;
+  transform: rotateZ(135deg);
+  background-color: rgba(21, 21, 21, 0.65) !important; }
+
+.hide-effect {
+  display: none !important;
+  transition: 1s; }
+
+.show-effect {
+  animation: show 3s linear;
+  display: table !important; }
+
+/******************************************************************
+*******************************   6. TEXT ANIMATION
+******************************************************************/
+.text-animation-phrases h2 {
+  width: 100%;
+  overflow: hidden;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center; }
+
+.text-animation-phrases h2 {
+  height: 100%;
+  /* Centering with flexbox */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.text-animation-phrases h2  {
+  margin: 0 15px; }
+
+.text-animation-phrases h2 > h2  {
+  display: inline-block;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+
+.text-animation-phrases h2 > h2 > h2 {
+  display: inline-block;
+  color: transparent;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: OpeningSequence 3s linear forwards;
+  -moz-animation: OpeningSequence 3s linear forwards;
+  animation: OpeningSequence 3s linear forwards; }
+@-webkit-keyframes OpeningSequence {
+  0% {
+    text-shadow: 0 0 50px #FFF;
+    letter-spacing: 80px;
+    opacity: 0;
+    -webkit-transform: rotateY(-90deg); }
+  50% {
+    text-shadow: 0 0 1px #FFF;
+    letter-spacing: 14px;
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg); }
+  85% {
+    text-shadow: 0 0 1px #FFF;
+    opacity: 0.8;
+    -webkit-transform: rotateY(0deg) translateZ(100px); }
+  100% {
+    text-shadow: 0 0 10px #FFF;
+    opacity: 0;
+    -webkit-transform: translateZ(130px);
+    pointer-events: none; } }
+@-moz-keyframes OpeningSequence {
+  0% {
+    text-shadow: 0 0 50px #FFF;
+    letter-spacing: 80px;
+    opacity: 0.2;
+    -moz-transform: rotateY(-90deg); }
+  50% {
+    text-shadow: 0 0 1px #FFF;
+    letter-spacing: 14px;
+    opacity: 0.8;
+    -moz-transform: rotateY(0deg); }
+  85% {
+    text-shadow: 0 0 1px #FFF;
+    opacity: 0.8;
+    -moz-transform: rotateY(0deg) translateZ(100px); }
+  100% {
+    text-shadow: 0 0 10px #FFF;
+    opacity: 0;
+    -moz-transform: translateZ(130px);
+    pointer-events: none; } }
+@keyframes OpeningSequence {
+  0% {
+    text-shadow: 0 0 50px #FFF;
+    letter-spacing: 80px;
+    opacity: 0.2;
+    transform: rotateY(-90deg); }
+  50% {
+    text-shadow: 0 0 1px #FFF;
+    letter-spacing: 14px;
+    opacity: 0.8;
+    transform: rotateY(0deg); }
+  85% {
+    text-shadow: 0 0 1px #FFF;
+    opacity: 0.8;
+    transform: rotateY(0deg) translateZ(100px); }
+  100% {
+    text-shadow: 0 0 10px #FFF;
+    opacity: 0;
+    transform: translateZ(130px);
+    pointer-events: none; } }
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #fff; }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #fff; } }
+@-moz-keyframes FadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #fff; }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #fff; } }
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    text-shadow: 0 0 50px #fff; }
+  100% {
+    opacity: 0.8;
+    text-shadow: 0 0 1px #fff; } }
+/******************************************************************
+*******************************   7. CONTENT
+******************************************************************/
+/**************************************
+  VERTICAL ALIGN  
+**************************************/
+.wrapper {
+  height: 100vh;
+  margin: 0 auto; }
+
+.wrapper,
+.logo,
+.text-effect,
+.main-paragraph,
+.subscribe-form,
+.switch-button-1,
+.switch-button-2,
+.switch-button-3,
+#counter,
+.contact-details,
+.contact-details-icon-container {
+  display: table;
+  z-index: 0; }
+
+.vcenter {
+  vertical-align: middle;
+  display: table-cell; }
+
+#main,
+.logo,
+.text-effect,
+.main-paragraph,
+#counter-area,
+#counter,
+.countdown,
+.counter-line,
+.social,
+#contact,
+.contact-details,
+.contact-details-icon-container,
+.contact-details-text {
+  margin: 0 auto; }
+
+/**************************************
+  DIVIDER   
+**************************************/
+.divider {
+  position: relative;
+  width: 0%;
+  height: 1px;
+  margin: 30px auto;
+  transition: 2s; }
+  .divider:after, .divider:before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: rgba(109, 109, 109, 0.65);
+    transform: rotate(45deg); }
+  .divider:after {
+    left: -23px;
+    margin-top: -9px; }
+  .divider:before {
+    left: 100%;
+    margin-left: 10px;
+    margin-top: -9px;
+    margin-left: 2px; }
+
+.divider-effect {
+  width: 90%;
+  transition: 2s; }
+
+/**************************************
+  MAIN SECTION
+**************************************/
+body, html {
+  overflow: hidden; }
+
+.padding-off {
+  padding: 0px; }
+
+.padding-right-off {
+  padding-right: 0px; }
+
+/** LOGO      
+**************************************/
+.logo {
+  width: 100%;
+  margin-bottom: 0px; 
+  margin-top: -56px;
+}
+  .logo img {
+    width: 75px;
+    height: auto; }
+
+/** MAIN H2     
+**************************************/
+.text-effect {
+  width: 100%;
+  height: 150px;
+  z-index: 0;
+  opacity: 0;
+  animation: show_text_effect 0.5s linear 1s forwards; }
+@keyframes show_text_effect {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .text-effect .text-animation-phrases {
+    width: 100vw;
+    left: 0%;
+    z-index: 31;
+    padding: 40px;
+    bottom: 0px; }
+
+/** PARAGRAPH     
+**************************************/
+.main-paragraph {
+  margin: 0;
+  padding: 10px 0px 100px; }
+
+/** SUBSCRIBE FORM    
+**************************************/
+.subscribe-form {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 260px; }
+  .subscribe-form .subscribe-email-field {
+    z-index: 1;
+    position: absolute;
+    vertical-align: middle;
+    width: 260px;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    background-color: transparent; }
+    .subscribe-form .subscribe-email-field:focus {
+      outline: none; }
+    .subscribe-form .subscribe-email-field::-ms-clear {
+      display: none; }
+  .subscribe-form .submit-form-icon {
+    opacity: 0;
+    display: block;
+    border: none;
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    cursor: pointer;
+    z-index: 2;
+    transition: opacity .5s ease-in-out; }
+  .subscribe-form .subscribe-email-label {
+    z-index: 0;
+    width: 260px;
+    height: 50px;
+    -webkit-font-smoothing: antialiased; }
+    .subscribe-form .subscribe-email-label span {
+      display: inline-block;
+      padding: 17px;
+      opacity: 1;
+      transition: opacity .5s ease-in-out;
+      width: 260px;
+      height: 50px;
+      z-index: 0;
+      transition: 1s; }
+    .subscribe-form .subscribe-email-label::before, .subscribe-form .subscribe-email-label::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 260px;
+      height: 1px;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: transform 0.5s; }
+    .subscribe-form .subscribe-email-label::before {
+      top: 5px; }
+    .subscribe-form .subscribe-email-label::after {
+      bottom: 5px; }
+
+.subscribe-email-field:focus + .subscribe-email-label span,
+.subscribe-email-field-on-focus .subscribe-email-span {
+  -webkit-transform: translate3d(0, -90%, 0);
+  transform: translate3d(0, -90%, 0);
+  transition: 1s; }
+
+.subscribe-email-field:focus + .subscribe-email-label::before {
+  -webkit-transform: translate3d(0, -0.5em, 0);
+  transform: translate3d(0, -0.5em, 0);
+  transition: 1s; }
+
+.subscribe-email-field:focus + .subscribe-email-label::after {
+  -webkit-transform: translate3d(0, 0.5em, 0);
+  transform: translate3d(0, 0.5em, 0);
+  transition: 1s; }
+
+.subscribe-email-field:focus ~ .submit-form-icon {
+  opacity: 1;
+  z-index: 3; }
+
+.subscribe-email-field-animation-default:focus + .subscribe-email-label-animation-default::before {
+  -webkit-transform: translate3d(0, -0.5em, 0);
+  transform: translate3d(0, -0.5em, 0);
+  animation: input 0.5s 0s linear 1;
+  animation-fill-mode: forwards; }
+
+.subscribe-email-field-animation-default:focus + .subscribe-email-label-animation-default::after {
+  -webkit-transform: translate3d(0, 0.5em, 0);
+  transform: translate3d(0, 0.5em, 0);
+  animation: input 0.5s 0s linear 1;
+  animation-fill-mode: forwards; }
+
+@keyframes input {
+  0% {
+    right: 0;
+    left: auto; }
+  50% {
+    width: 0px;
+    opacity: 0; }
+  100% {
+    left: 0;
+    right: auto;
+    width: 260px;
+    background: linear-gradient(to left, rgba(0, 255, 255, 0), cyan, rgba(0, 255, 255, 0));
+    opacity: 0.5; } }
+.subscribe-email-field-animation-error:focus + .subscribe-email-label-animation-error::before {
+  -webkit-transform: translate3d(0, -0.5em, 0);
+  transform: translate3d(0, -0.5em, 0);
+  animation: inputerror 0.5s 0s linear 1;
+  animation-fill-mode: forwards; }
+
+.subscribe-email-field-animation-error:focus + .subscribe-email-label-animation-error::after {
+  -webkit-transform: translate3d(0, 0.5em, 0);
+  transform: translate3d(0, 0.5em, 0);
+  animation: inputerror 0.5s 0s linear 1;
+  animation-fill-mode: forwards; }
+
+@keyframes inputerror {
+  0% {
+    right: 0;
+    left: auto; }
+  50% {
+    width: 0px;
+    opacity: 0; }
+  100% {
+    left: 0;
+    right: auto;
+    width: 260px;
+    background: linear-gradient(to left, rgba(0, 255, 255, 0), red, rgba(0, 255, 255, 0));
+    opacity: 0.5; } }
+/** SWITCHING SECTIONS BUTTONS    
+**************************************/
+.switch-button-1,
+.switch-button-2,
+.switch-button-3 {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: 0.5s; }
+  .switch-button-1 .vcenter,
+  .switch-button-2 .vcenter,
+  .switch-button-3 .vcenter {
+    transform: rotate(-45deg); }
+  .switch-button-1 i,
+  .switch-button-2 i,
+  .switch-button-3 i {
+    position: relative;
+    transition: 0.2s;
+    top: 0; }
+  .switch-button-1:hover i,
+  .switch-button-2:hover i,
+  .switch-button-3:hover i {
+    animation: down 1s linear infinite; }
+@keyframes down {
+  50% {
+    top: 10px; }
+  100% {
+    top: 0; } }
+  .switch-button-1 .layer1,
+  .switch-button-1 .layer2,
+  .switch-button-1 .layer3,
+  .switch-button-1 .layer4,
+  .switch-button-2 .layer1,
+  .switch-button-2 .layer2,
+  .switch-button-2 .layer3,
+  .switch-button-2 .layer4,
+  .switch-button-3 .layer1,
+  .switch-button-3 .layer2,
+  .switch-button-3 .layer3,
+  .switch-button-3 .layer4 {
+    margin: 0 auto;
+    line-height: 50px;
+    position: absolute;
+    content: ''; }
+  .switch-button-1 .layer1,
+  .switch-button-2 .layer1,
+  .switch-button-3 .layer1 {
+    top: 0px;
+    left: 0px;
+    right: auto;
+    width: 50px;
+    height: 1px;
+    z-index: -1;
+    animation: impuls1 2s linear infinite; }
+@keyframes impuls1 {
+  0% {
+    width: 0px;
+    height: 1px; }
+  10% {
+    width: 50px;
+    left: 0;
+    right: auto; }
+  10.9% {
+    width: 50px;
+    right: 0;
+    left: auto; }
+  20% {
+    width: 0px; }
+  100% {
+    width: 0px;
+    right: 0;
+    left: auto; } }
+  .switch-button-1 .layer2,
+  .switch-button-2 .layer2,
+  .switch-button-3 .layer2 {
+    top: 0px;
+    left: 0px;
+    right: auto;
+    width: 1px;
+    height: 50px;
+    z-index: -1;
+    animation: impuls2 2s linear infinite; }
+@keyframes impuls2 {
+  0% {
+    height: 0px;
+    width: 1px; }
+  10% {
+    height: 50px;
+    top: 0;
+    bottom: auto; }
+  10.9% {
+    height: 50px;
+    bottom: 0;
+    top: auto; }
+  20% {
+    height: 0px; }
+  100% {
+    height: 0px;
+    bottom: 0;
+    top: auto; } }
+  .switch-button-1 .layer3,
+  .switch-button-2 .layer3,
+  .switch-button-3 .layer3 {
+    top: 0px;
+    left: auto;
+    right: 0;
+    width: 0px;
+    height: 50px;
+    z-index: -1;
+    animation: impuls2 2s 0.3s linear infinite; }
+@keyframes impuls2 {
+  0% {
+    height: 0px;
+    width: 1px; }
+  10% {
+    height: 50px;
+    top: 0;
+    bottom: auto; }
+  10.9% {
+    height: 50px;
+    bottom: 0;
+    top: auto; }
+  20% {
+    height: 0px; }
+  100% {
+    height: 0px;
+    bottom: 0;
+    top: auto; } }
+  .switch-button-1 .layer4,
+  .switch-button-2 .layer4,
+  .switch-button-3 .layer4 {
+    bottom: 0px;
+    left: 0px;
+    right: auto;
+    width: 50px;
+    height: 0px;
+    z-index: -1;
+    animation: impuls1 2s 0.3s linear infinite; }
+@keyframes impuls1 {
+  0% {
+    width: 0px;
+    height: 1px; }
+  10% {
+    width: 50px;
+    left: 0;
+    right: auto; }
+  10.9% {
+    width: 50px;
+    right: 0;
+    left: auto; }
+  20% {
+    width: 0px; }
+  100% {
+    width: 0px;
+    right: 0;
+    left: auto; } }
+.switch-button-1,
+.switch-button-2 {
+  transform: rotate(45deg);
+  margin-top: 50px; }
+
+.switch-button-3 {
+  transform: rotate(-135deg); }
+  .switch-button-3 i {
+    transform: rotate(180deg); }
+
+/**************************************
+  COUNTER AREA SECTION 
+**************************************/
+#counter-area {
+  display: none;
+  width: 100%;
+  color: white;
+  /** COUNTER   
+  **************************************/
+  /** SOCIAL ICONS    
+  **************************************/ }
+  #counter-area .counter-paragraph {
+    margin: 0 auto;
+    padding: 10px 0px;
+    max-width: 450px; }
+  #counter-area #counter {
+    position: relative;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 0px; }
+    #counter-area #counter .countdown-wrap {
+      position: relative;
+      transform: rotateY(-90deg);
+      transition: 0.5s;
+      margin: 0 22px !important;
+      display: inline-block;
+      margin: 0 10px; }
+      #counter-area #counter .countdown-wrap .count-unit {
+        text-transform: uppercase;
+        position: relative;
+        top: 10px; }
+        #counter-area #counter .countdown-wrap .count-unit::after {
+          content: '';
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          background: linear-gradient(to right, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.4), cyan);
+          top: 20px;
+          left: 0;
+          z-index: 4;
+          animation: countunit 1s 2.5s linear forwards; }
+@keyframes countunit {
+  0% {
+    width: 0%;
+    left: 0; }
+  50% {
+    width: 100%; }
+  100% {
+    width: 100%; } }
+    #counter-area #counter .countdown-rotate {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      transform: rotate(-45deg);
+      transition: 0.5s;
+      background-image: linear-gradient(to right, white, white), linear-gradient(to bottom, white, white), linear-gradient(to top, white, white), linear-gradient(to left, white, white);
+      border: 1px solid transparent;
+      background-repeat: no-repeat;
+      background-position: top left, top right, bottom right, bottom left;
+      background-size: 0% 1px, 1px 0%, 0% 1px, 1px 0%; }
+      #counter-area #counter .countdown-rotate .countdown {
+        display: block;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(45deg);
+        top: 50%;
+        left: 50%; }
+    #counter-area #counter .countdown-wrap-active {
+      transform: rotateY(0deg);
+      transition: 0.5s; }
+    #counter-area #counter .countdown-rotate-active {
+      background-size: 80% 1px, 1px 80%, 80% 1px, 1px 80%;
+      transition: 1.5s; }
+    #counter-area #counter .counter-align {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  #counter-area .social {
+    height: 60px;
+    width: 100%;
+    margin: 20px auto; }
+    #counter-area .social .icon-center {
+      height: 40px;
+      margin: 0 auto; }
+      #counter-area .social .icon-center .layer-soc {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        margin: 0px 5px;
+        float: left;
+        line-height: 40px;
+        background-image: linear-gradient(to right, white, white), linear-gradient(to bottom, white, white), linear-gradient(to top, white, white), linear-gradient(to left, white, white);
+        border: 1px solid transparent;
+        background-repeat: no-repeat;
+        background-position: top left, top right, bottom right, bottom left;
+        background-size: 0% 1px, 1px 0%, 0% 1px, 1px 0%;
+        transition: 0.2s;
+        /*border: 1px solid white;*/ }
+        #counter-area .social .icon-center .layer-soc:hover {
+          background-size: 80% 1px, 1px 80%, 80% 1px, 1px 80%;
+          transition: 0.5s; }
+
+/**************************************
+  CONTACT SECTION 
+**************************************/
+#contact {
+  display: none;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  float: none;
+  /** CONTACT DETAILS   
+  **************************************/ }
+  #contact .section-title {
+    margin: 20px; }
+  #contact .contact-paragraph {
+	  direction: rtl;
+    margin-bottom: 20px; }
+  #contact .contact-details {
+    position: relative;
+    height: 95px;
+    width: 100%;
+    margin-bottom: 20px; }
+    #contact .contact-details .contact-details-icon-container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px; }
+      #contact .contact-details .contact-details-icon-container .contact-details-icon {
+        opacity: 0.8;
+        z-index: -1;
+        transition: 2s;
+        color: #007fa9; }
+      #contact .contact-details .contact-details-icon-container .contact-details-icon-effect {
+        opacity: 0.1;
+        color: #FFF;
+        transition: 2s;
+        z-index: 1; }
+    #contact .contact-details .contact-details-text {
+      opacity: 0;
+      z-index: 2;
+      position: relative; }
+    #contact .contact-details .contact-details-text-effect {
+      opacity: 1;
+      transition: 2s; }
+  #contact .cd-phone {
+    padding-right: 5px; }
+  #contact .cd-email {
+    padding-left: 0px; }
+    #contact .cd-email a:hover, #contact .cd-email a:focus {
+      text-decoration: none; }
+  #contact .cd-address {
+    margin-bottom: 50px; }
+
+/******************************************************************
+*******************************   8. MEDIA QUERIES
+******************************************************************/
+/**************************************
+  TABLETS
+*************************************/
+@media only screen and (max-width: 991px) {
+  .logo img {
+    width: 75px; }
+
+  #contact {
+    overflow-y: scroll;
+    height: 80vh; } }
+
+  #contact.show-effect {
+    display: block !important;  }
+/**************************************
+  MOBILES
+*************************************/
+@media only screen and (max-width: 768px) {
+  #counter-area {
+    overflow-y: scroll;
+    height: 340px; }
+
+  #counter-area.show-effect {
+    display: block !important;  }
+
+  #counter {
+    margin-bottom: 0px; }
+
+  #counter-area #counter .countdown-wrap {
+    width: 40%;
+    margin: 5% !important;
+    margin-bottom: 30px !important; }
+
+  .countdown-wrap .countdown-rotate {
+    margin: 0 auto;  }
+
+  .text-animation-phrases h2 > span {
+    height: 50px;
+    float: left;
+    left: 0px;
+    width: 100vw;
+    position: absolute; }
+
+  .layer-soc {
+    margin: 0px; }
+
+  .divider-effect {
+    width: 50%; } 
+	.sp-container h2{
+		font-size: 20px !important;
+	}
+	.sp-container h2.frame-4 {
+	font-size: 50px !important;
+	}
+}
+
+/*# sourceMappingURL=style.css.map */
